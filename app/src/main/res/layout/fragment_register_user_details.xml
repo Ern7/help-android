@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60sp"
+                    android:src="@drawable/devices"/>
+
+                <za.co.randomteam.help.fonts.FuturaBoldTextView
+                    android:id="@+id/title"
+                    android:text="Personal Details"
+                    android:layout_below="@+id/logo"
+                    style="@style/splash_title_label"/>
+
+                <za.co.randomteam.help.fonts.FuturaTextView
+                    android:id="@+id/subtitle"
+                    android:text="Tell us about yourself"
+                    android:layout_below="@+id/title"
+                    style="@style/splash_subtitle_label"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="0sp"
+                    android:layout_weight="1"
+                    style="@style/edittext_parent_container">
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:imeOptions="actionNext"
+                        android:hint="Name"
+                        style="@style/edittext" />
+
+                    <ImageView
+                        android:src="@drawable/password_60px"
+                        style="@style/edittext_left_icon"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginLeft="0sp"
+                    android:layout_width="0sp"
+                    android:layout_weight="1"
+                    style="@style/edittext_parent_container">
+
+                    <EditText
+                        android:id="@+id/surname"
+                        android:imeOptions="actionNext"
+                        android:hint="Surname"
+                        style="@style/edittext" />
+
+                    <ImageView
+                        android:src="@drawable/password_60px"
+                        style="@style/edittext_left_icon"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                style="@style/edittext_parent_container">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:imeOptions="actionNext"
+                    android:hint="Mobile"
+                    style="@style/edittext" />
+
+                <ImageView
+                    android:src="@drawable/password_60px"
+                    style="@style/edittext_left_icon"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/edittext_parent_container">
+
+                <EditText
+                    android:id="@+id/address"
+                    android:imeOptions="actionNext"
+                    android:hint="Address"
+                    style="@style/edittext" />
+
+                <ImageView
+                    android:src="@drawable/password_60px"
+                    style="@style/edittext_left_icon"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/next"
+                android:text="Next"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                style="@style/button" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
