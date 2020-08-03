@@ -1,5 +1,6 @@
 package za.co.randomteam.help.ui.account;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -30,5 +31,15 @@ public class SplashActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
+
+        (findViewById(R.id.register)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            {
+                Intent intent = new Intent(SplashActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+            }
+        });
     }
 }
