@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"></androidx.constraintlayout.widget.ConstraintLayout>
+    android:background="@color/colorPrimary"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120sp"
+        android:src="@drawable/devices"/>
+
+    <za.co.randomteam.help.fonts.FuturaBoldTextView
+        android:id="@+id/title"
+        android:text="Help App"
+        android:layout_below="@+id/logo"
+        style="@style/splash_title_label"/>
+
+    <za.co.randomteam.help.fonts.FuturaTextView
+        android:id="@+id/subtitle"
+        android:text="Helping you find help quicker"
+        android:layout_below="@+id/title"
+        style="@style/splash_subtitle_label"/>
+
+    <Button
+        android:id="@+id/register"
+        android:text="Register"
+        android:layout_above="@+id/login"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        style="@style/button" />
+
+    <za.co.randomteam.help.fonts.FuturaTextView
+        android:id="@+id/login"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Login here"
+        style="@style/register_textview"/>
+
+
+</RelativeLayout>

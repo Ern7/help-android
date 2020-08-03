@@ -12,4 +12,28 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="default_font">fonts/FuturaLT.ttf</string>
+    <string name="default_font_bold">fonts/FuturaLTBold.ttf</string>
+    <string name="default_font_light">fonts/FuturaLTLight.ttf</string>
+
+    <string name="retry">Retry</string>
+    <string name="mobile">Email address</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="forgot">Forgot?</string>
+    <string name="cancel">Cancel</string>
+    <string name="login_intro">Please login with your continue.</string>
+    <string name="forgot_intro">Enter your email address and we will send your password.</string>
+    <string name="error_field_required">This field is required!</string>
+    <string name="error_invalid_email">Invalid email address!</string>
+    <string name="download">Download</string>
+    <string name="read">Read</string>
+    <string name="profile">Profile</string>
+    <string name="title_activity_my_account">MyAccountActivity</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_devices">DevicesActivity</string>
+    <string name="devices">Devices</string>
+    <string name="title_activity_paper_detail">PaperDetailActivity</string>
+    <string name="register_now">Don\'t have an account? Register now.</string>
 </resources>
