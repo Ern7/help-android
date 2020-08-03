@@ -15,14 +15,12 @@ public class NotificationsViewModel extends ViewModel {
 
     private MutableLiveData<ArrayList<Alerts>> alertsList;
     private MutableLiveData<Boolean> isLoading;
-
     public NotificationsViewModel() {
        init();
     }
 
     void init(){
         alertsList = new MutableLiveData<>();
-
         isLoading = new MutableLiveData<>();
         isLoading.setValue(true);
         new Handler().postDelayed(new Runnable() {
@@ -30,8 +28,7 @@ public class NotificationsViewModel extends ViewModel {
                 isLoading.setValue(false);
                 populateAlerts();
             }
-        }, 4000);
-
+        }, 3000);
     }
 
     public LiveData<Boolean> getProgress() {

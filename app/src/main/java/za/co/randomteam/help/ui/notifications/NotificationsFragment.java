@@ -36,8 +36,6 @@ public class NotificationsFragment extends BaseFragment implements IAlertListene
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
         ((TextView)root.findViewById(R.id.toolbar_title)).setText("Alerts");
         setupControls(root);
-
-
         return root;
     }
     void setupControls(View root){

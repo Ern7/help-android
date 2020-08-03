@@ -13,7 +13,7 @@ import za.co.randomteam.help.R;
 public class BaseFragment extends Fragment {
 
      protected RecyclerView initRV(View root) {
-         RecyclerView view = root.findViewById(R.id.recycler_view);
+        RecyclerView view = root.findViewById(R.id.recycler_view);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(requireContext());
         view.setLayoutManager(mLayoutManager);
         view.setItemAnimator(new DefaultItemAnimator());

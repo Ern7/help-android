@@ -1,5 +1,6 @@
 package za.co.randomteam.help.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import za.co.randomteam.help.R;
 import za.co.randomteam.help.ui.notifications.NotificationsViewModel;
+import za.co.randomteam.help.ui.other.HelpRequestActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -21,11 +23,19 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider.NewInstanceFactory ().create( HomeViewModel.class);
+        homeViewModel = new ViewModelProvider.NewInstanceFactory().create(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         final TextView toolbarTitle = root.findViewById(R.id.toolbar_title);
+        final TextView triggerBtn = root.findViewById(R.id.trigger_btn);
         toolbarTitle.setText("Home");
+
+        triggerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(requireContext(), HelpRequestActivity.class));
+            }
+        });
+
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

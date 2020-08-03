@@ -36,6 +36,7 @@
     </LinearLayout>
 
         <za.co.randomteam.help.fonts.FuturaTextView
+            android:id="@+id/trigger_btn"
             android:background="@drawable/bg_circle"
             android:text="Trigger"
             android:textSize="18sp"
